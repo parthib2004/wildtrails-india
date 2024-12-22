@@ -119,6 +119,106 @@ const locations = [
       ],
       bannerImage: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Gir_National_Park_banner.jpg",
     },
+    {
+      name: "Manas National Park",
+      coords: [26.6583, 91.0011],
+      wildlife: ["Indian Rhino", "Pygmy Hog", "Golden Langur", "Bengal Tiger"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d9/Manas_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/River_in_Manas_National_Park.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Manas_National_Park_Entrance.jpg",
+    },
+    {
+      name: "Pench National Park",
+      coords: [21.6492, 79.3188],
+      wildlife: ["Bengal Tiger", "Leopards", "Indian Wolf", "Wild Dogs"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/1/15/Pench_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Tiger_in_Pench_National_Park.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Pench_National_Park_banner.jpg",
+    },
+    {
+      name: "Anamalai Tiger Reserve",
+      coords: [10.3665, 77.0015],
+      wildlife: ["Tigers", "Leopards", "Indian Pangolin", "Nilgiri Langur"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/5/55/Anamalai_Tiger_Reserve.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/23/Nilgiri_Langur.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/4/45/Anamalai_Tiger_Reserve_banner.jpg",
+    },
+    {
+      name: "Dachigam National Park",
+      coords: [34.0847, 74.9111],
+      wildlife: ["Kashmir Stag", "Himalayan Black Bear", "Leopard", "Musk Deer"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/1/1a/Dachigam_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/68/Kashmir_Stag_in_Dachigam.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Dachigam_National_Park_banner.jpg",
+    },
+    {
+      name: "Bannerghatta National Park",
+      coords: [12.8003, 77.5770],
+      wildlife: ["White Tiger", "Indian Leopard", "Indian Elephant", "Sloth Bear"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bannerghatta_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a8/White_Tiger_in_Bannerghatta.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Bannerghatta_National_Park_banner.jpg",
+    },
+    {
+      name: "Silent Valley National Park",
+      coords: [11.0784, 76.4572],
+      wildlife: ["Lion-tailed Macaque", "Nilgiri Langur", "Indian Pangolin"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/3/3a/Silent_Valley_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4f/Silent_Valley_Wildlife.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/9/92/Silent_Valley_National_Park_banner.jpg",
+    },
+    {
+      name: "Valley of Flowers National Park",
+      coords: [30.7280, 79.6051],
+      wildlife: ["Snow Leopard", "Musk Deer", "Himalayan Monal"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a1/Valley_of_Flowers_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bd/Himalayan_Monal_in_Valley_of_Flowers.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Valley_of_Flowers_banner.jpg",
+    },
+    {
+      name: "Keoladeo National Park",
+      coords: [27.1591, 77.5217],
+      wildlife: ["Siberian Crane", "Painted Stork", "Indian Python"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/5/5b/Keoladeo_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4e/Siberian_Crane_in_Keoladeo.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/e/e3/Keoladeo_National_Park_banner.jpg",
+    },
+    {
+      name: "Bhagwan Mahavir Wildlife Sanctuary",
+      coords: [15.3384, 74.1755],
+      wildlife: ["Indian Bison", "Leopard", "King Cobra"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/8/87/Bhagwan_Mahavir_Wildlife_Sanctuary.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b2/King_Cobra_in_Mahavir_Sanctuary.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Bhagwan_Mahavir_Sanctuary_banner.jpg",
+    },
+    {
+      name: "Mudumalai National Park",
+      coords: [11.5671, 76.5546],
+      wildlife: ["Indian Elephant", "Bengal Tiger", "Leopard", "Sloth Bear"],
+      photos: [
+        "https://upload.wikimedia.org/wikipedia/commons/2/24/Mudumalai_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/cb/Elephants_in_Mudumalai.jpg",
+      ],
+      bannerImage: "https://upload.wikimedia.org/wikipedia/commons/d/db/Mudumalai_National_Park_banner.jpg",
+    },
   ];
   
   export default locations;
