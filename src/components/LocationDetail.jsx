@@ -132,6 +132,46 @@ const animalFacts = {
   ]
 };
 
+const ShareButton = ({ location }) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const shareData = {
+    title: `Visit ${location.name}`,
+    text: `Explore ${location.name} and its amazing wildlife including ${location.wildlife.join(', ')}!`,
+    url: window.location.href
+  };
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        // Use native share if available
+        await navigator.share(shareData);
+      } else {
+        // Fallback to copying link
+        await navigator.clipboard.writeText(window.location.href);
+        setShowTooltip(true);
+        setTimeout(() => setShowTooltip(false), 2000);
+      }
+    } catch (error) {
+      console.error('Error sharing:', error);
+    }
+  };
+
+  return (
+    <div className="share-button-container">
+      <button onClick={handleShare} className="share-button">
+        <span className="share-icon">📤</span>
+        Share
+      </button>
+      {showTooltip && (
+        <div className="share-tooltip">
+          Link copied to clipboard!
+        </div>
+      )}
+    </div>
+  );
+};
+
 const LocationDetail = () => {
   const { name } = useParams();
   const location = locations.find((loc) => loc.name === decodeURIComponent(name));
@@ -266,6 +306,8 @@ const LocationDetail = () => {
         ← Back to Map
       </Link>
       
+      <ShareButton location={location} />
+      
       <div className="hero-section" style={heroStyle}>
         <div className="hero-content">
           <h1>{location.name}</h1>
@@ -315,7 +357,6 @@ const LocationDetail = () => {
           <h2>Plan Your Visit</h2>
           <CarbonCalculator distance={distance} />
         </div>
-
         <div className="fun-fact-section">
           <h2>Did You Know?</h2>
           <div className="fact-card">
