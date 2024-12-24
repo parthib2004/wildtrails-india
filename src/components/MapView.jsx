@@ -13,6 +13,20 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
+// Create a custom divIcon for markers with labels
+const createCustomIcon = (location) => {
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `
+      <div class="marker-pin"></div>
+      <div class="marker-label">${location.name}</div>
+    `,
+    iconSize: [30, 42],
+    iconAnchor: [15, 42],
+    popupAnchor: [0, -42]
+  });
+};
+
 // Add the same getAnimalEmoji function here
 const getAnimalEmoji = (animal) => {
   const animalEmojis = {
@@ -99,7 +113,11 @@ const MapView = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
         {filteredLocations.map((loc, index) => (
-          <Marker key={index} position={loc.coords}>
+          <Marker 
+            key={index} 
+            position={loc.coords}
+            icon={createCustomIcon(loc)}
+          >
             <Popup className="custom-popup">
               <div className="popup-content">
                 <h3>{loc.name}</h3>
