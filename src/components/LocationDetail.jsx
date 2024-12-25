@@ -4,6 +4,8 @@ import locations from "../data/locations";
 import { fetchWeather } from "../utils/weather";
 import CarbonCalculator from './CarbonCalculator';
 import axios from "axios";
+import { reviews } from '../data/reviews';
+import ReviewForm from './ReviewForm';
 
 const getAnimalEmoji = (animal) => {
   const animalEmojis = {
@@ -185,6 +187,7 @@ const LocationDetail = () => {
     fact: '',
     loading: true
   });
+  const [locationReviews, setLocationReviews] = useState([]);
 
   useEffect(() => {
     const getWeather = async () => {
@@ -292,6 +295,20 @@ const LocationDetail = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (location) {
+      setLocationReviews(reviews[location.name] || []);
+    }
+  }, [location]);
+
+  const handleNewReview = (review) => {
+    setLocationReviews(prev => [review, ...prev]);
+  };
+
+  const renderStars = (rating) => {
+    return "⭐".repeat(rating);
+  };
+
   if (!location) {
     return <p>Location not found!</p>;
   }
@@ -373,6 +390,22 @@ const LocationDetail = () => {
             )}
           </div>
         </div>
+        <section className="reviews-section">
+          <h2>Visitor Reviews</h2>
+          <ReviewForm onSubmit={handleNewReview} />
+          <div className="reviews-list">
+            {locationReviews.map((review, index) => (
+              <div key={index} className="review-card">
+                <div className="review-header">
+                  <span className="username">{review.username}</span>
+                  <span className="rating">{renderStars(review.rating)}</span>
+                  <span className="date">{review.date}</span>
+                </div>
+                <p className="review-comment">{review.comment}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
