@@ -1,3 +1,14 @@
+# Wildlife Environment Explorer
+
+## Environment Setup
+1. Copy `.env.example` to `.env`
+2. Get your API keys:
+   - Gemini API key from: https://makersuite.google.com/app/apikey
+   - OpenWeather API key from: https://openweathermap.org/api
+3. Add your API keys to the `.env` file
+
+**Important:** Never commit the `.env` file to version control!
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
