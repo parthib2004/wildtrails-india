@@ -67,7 +67,7 @@ const getAnimalEmoji = (animal) => {
     "One-horned Rhinoceros": "🦏",
 
     // Default
-    "default": "🦁"
+    "default": "🐾"
   };
 
   return animalEmojis[animal] || animalEmojis.default;
