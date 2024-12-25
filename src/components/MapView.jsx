@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from 'leaflet';
 import locations from "../data/locations";
+import WildlifeChat from './WildlifeChat';
 
 // Fix for default marker icons
 delete L.Icon.Default.prototype._getIconUrl;
@@ -136,6 +137,7 @@ const MapView = () => {
           </Marker>
         ))}
       </MapContainer>
+      <WildlifeChat />
     </div>
   );
 };
