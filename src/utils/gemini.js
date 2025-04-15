@@ -12,6 +12,7 @@ const getGeminiAPI = () => {
 export const getGeminiResponse = async (prompt) => {
   try {
     const genAI = getGeminiAPI();
+    // Updated model name to the correct one - using the standard "gemini-pro" model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
     const context = `
